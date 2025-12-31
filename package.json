@@ -1,6 +1,6 @@
 {
   "name": "plannotator",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "private": true,
   "description": "Interactive Plan Review for Claude Code - annotate plans visually, share with team, automatically send feedback",
   "author": "backnotprop",
@@ -13,15 +13,22 @@
   "bugs": {
     "url": "https://github.com/backnotprop/plannotator/issues"
   },
-  "workspaces": ["apps/*", "packages/*"],
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "node-fetch": "^3.3.2"
+  },
   "scripts": {
-    "dev:hook": "bun run --cwd apps/hook dev",
-    "dev:portal": "bun run --cwd apps/portal dev",
-    "dev:marketing": "bun run --cwd apps/marketing dev",
-    "build:hook": "bun run --cwd apps/hook build",
-    "build:portal": "bun run --cwd apps/portal build",
-    "build:marketing": "bun run --cwd apps/marketing build",
-    "build:opencode": "bun run --cwd apps/opencode-plugin build",
-    "build": "bun run build:hook && bun run build:opencode"
+    "dev:hook": "node init && bun run --cwd apps/hook dev",
+    "dev:portal": "node init && bun run --cwd apps/portal dev",
+    "dev:marketing": "node init && bun run --cwd apps/marketing dev",
+    "build:hook": "node init && bun run --cwd apps/hook build",
+    "build:portal": "node init && bun run --cwd apps/portal build",
+    "build:marketing": "node init && bun run --cwd apps/marketing build",
+    "build:opencode": "node init && bun run --cwd apps/opencode-plugin build",
+    "build": "node init && bun run build:hook && bun run build:opencode"
   }
 }

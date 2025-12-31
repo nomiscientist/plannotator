@@ -28,7 +28,7 @@
     "README.md"
   ],
   "scripts": {
-    "build": "cp ../hook/dist/index.html ./plannotator.html",
+    "build": "node init && cp ../hook/dist/index.html ./plannotator.html",
     "prepublishOnly": "bun run build"
   },
   "dependencies": {

@@ -4,8 +4,8 @@
   "version": "0.0.1",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build && cp dist/index.html dist/redline.html",
+    "dev": "node init && vite",
+    "build": "node init && vite build && cp dist/index.html dist/redline.html",
     "serve": "bun run server/index.ts"
   },
   "dependencies": {
